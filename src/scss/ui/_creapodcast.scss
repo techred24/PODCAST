@@ -2,8 +2,13 @@
 @use 'base/mixins' as m;
 
 .crea-grid {
+    text-align: center;
     @include m.tablet {
         @include m.grid(2, 2rem);
         align-items: center;
+        text-align: left;
+    }
+    h2 {
+        @include m.headingBorder(v.$secundario, v.$primario);
     }
 }
