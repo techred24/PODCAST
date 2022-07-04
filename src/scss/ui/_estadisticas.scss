@@ -1,0 +1,20 @@
+@use 'base/variables' as v;
+@use 'base/mixins' as m;
+
+.estadisticas {
+    h2 {
+        @include m.headingBorder(v.$secundario, v.$primario);
+
+        text-align: center;
+        @include m.tablet {
+            text-align: left;
+        }
+    }
+
+    p {
+        text-align: justify;
+        @include m.tablet {
+            text-align: left;
+        }
+    }
+}
