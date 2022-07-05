@@ -22,12 +22,43 @@
     }
 
     .plan {
+        flex-grow: 1;
+        background-color: v.$blanco;
+        padding: 16rem 4rem 4rem 4rem;
+        border-radius: 1px solid #e1e1e1;
+
+        .precio {
+            font-size: 1.8rem;
+            text-align: center;
+            font-weight: 700;
+            text-transform: uppercase;
+        }
+
+        .listado {
+            li {
+                text-align: center;
+                margin-bottom: 2rem;
+
+                &:last-of-type {
+                    margin-bottom: 0;
+                }
+            }
+        }
+
+        &.inicio {
+            @include m.iconoBg('../img/icono_inicio.svg');
+        }
         &.negocio {
+            background-color: v.$primario;
             order: -1;
+            @include m.iconoBg('../img/icono_negocio.svg');
 
             @include m.tablet {
                 order: unset;
             }
+        }
+        &.pro {
+            @include m.iconoBg('../img/icono_pro.svg');
         }
     }
 }
