@@ -30,14 +30,11 @@
         @include m.tablet {
             max-width: 70%;
 
-            &:nth-of-type(1) {
-                margin-left: 10%;
-            }
-            &:nth-of-type(2) {
-                margin-left: 20%;
-            }
-            &:nth-of-type(3) {
-                margin-left: 30%;
+            @for $i from 1 through 3 {
+                &:nth-of-type(#{$i}) {
+                    // margin-left: #{($i * 10) + '%' };
+                    margin-left: #{$i * 10} + '%';
+                }
             }
         }
 
